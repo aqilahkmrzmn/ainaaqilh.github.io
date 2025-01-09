@@ -1,0 +1,166 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: black;
+    background: url('image/wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.biodata-container {
+    margin-left: 20px; /* Adds left margin */
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: indigo;
+    margin: 0 0 10px;
+}
+
+/* Links */
+a {
+    color: indigo;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Button */
+.nav-button {
+    background-color: indigo;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: indigo;
+    border: 1px solid indigo;
+}
+
+/* Navigation Popup */
+.nav-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid indigo;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-popup ul li {
+    margin: 10px 0;
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+}
+
+/* Experience Page Container */
+.experience-container {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin-left: 50px; /* Adds left margin */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.experience-details {
+    margin-top: 20px;
+}
+
+/* Sections */
+.experience-info, .extracurricular, .key-project-info {
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-bottom: 5px;
+    color: indigo;
+}
+
+ul {
+    margin: 0;
+    padding: 0 20px;
+    list-style: square;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: indigo;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Active Popup */
+.nav-popup.active {
+    display: block;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.carousel img {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 150px;
+    background-color: #ddd; /* Placeholder background */
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Background</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: url('image/wallpaper.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1, h2, h3 {
+            color: indigo;
+            margin: 0 0 10px;
+        }
+
+        a {
+            color: indigo;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero-box {
+            display: inline-block;
+            border: 2px solid indigo;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .education-section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            color: black;
+        }
+
+        .education-section h2 {
+            text-align: center;
+            color: indigo;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item h3 {
+            margin-bottom: 5px;
+        }
+
+        .education-item p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .education-item img {
+            display: block;
+            margin: 10px auto;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .nav-button {
+            background-color: indigo;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .nav-button:hover {
+            background-color: white;
+            color: indigo;
+            border: 1px solid indigo;
+        }
+
+        .nav-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 2px solid indigo;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-popup ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-popup ul li {
+            margin: 10px 0;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            background-color: indigo;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-box">
+            <h1><i><b>My Life Chronicles</b></i></h1>
+            <h2>Educational Background</h2>
+        </div>
+    </section>
+
+    <!-- Educational Section -->
+    <div class="education-section">
+        <h2>My Education Journey</h2>
+
+        <!-- Primary School -->
+        <div class="education-item">
+            <h3>Primary School</h3>
+            <img src="image/primary.jpeg" alt="Primary School">
+            <p><strong>School:</strong> Sekolah Kebangsaan Perdana Jaya SS19</p>
+            <p><strong>Years:</strong> 2011 - 2016</p>
+            <p><strong>Address:</strong> Jalan SS 19/1, SS 19, 47500 Subang Jaya, Selangor</p>
+        </div>
+
+        <!-- Secondary School -->
+        <div class="education-item">
+            <h3>Secondary School</h3>
+            <img src="image/secondary.jpg" alt="Secondary School">
+            <p><strong>School:</strong> Sekolah Menengah Kebangsaan Subang Utama SS18</p>
+            <p><strong>Years:</strong> 2017 - 2022</p>
+            <p><strong>Address:</strong> Jalan SS 18/1a, SS 18, 47500 Subang Jaya, Selangor</p>
+        </div>
+
+        <!-- Higher Education -->
+        <div class="education-item">
+            <h3>Higher Education</h3>
+            <img src="image/higher.jpg" alt="Higher Education">
+            <p><strong>Institution:</strong> Universiti Teknologi MARA, Machang Kelantan Branch</p>
+            <p><strong>Years:</strong> 2022 - 2024/25</p>
+            <p><strong>Address:</strong> UiTM Kelantan, Kampung Belukar, 18500 Bandar Machang, Kelantan</p>
+        </div>
+    </div>
+
+    <!-- Navigation Popup -->
+    <button class="nav-button" onclick="toggleNav()">Menu</button>
+    <div class="overlay" onclick="toggleNav()"></div>
+    <div class="nav-popup" id="navPopup">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="kindred.html">Kindred</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ainaa Aqilah Kamaruzaman. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const navPopup = document.getElementById('navPopup');
+            const overlay = document.querySelector('.overlay');
+            const isVisible = navPopup.style.display === 'block';
+
+            navPopup.style.display = isVisible ? 'none' : 'block';
+            overlay.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

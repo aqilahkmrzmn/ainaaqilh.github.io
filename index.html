@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Life Chronicles</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: url('image/wallpaper.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1, h2, h3 {
+            color: indigo;
+            margin: 0 0 10px;
+        }
+
+        a {
+            color: indigo;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero-box {
+            display: inline-block;
+            border: 2px solid indigo;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero-box img {
+            margin-top: 20px;
+            width: 300px; /* Doubled the width */
+            height: 300px; /* Doubled the height */
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-button {
+            background-color: indigo;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .nav-button:hover {
+            background-color: white;
+            color: indigo;
+            border: 1px solid indigo;
+        }
+
+        .nav-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 2px solid indigo;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-popup ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-popup ul li {
+            margin: 10px 0;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .aboutus {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: black;
+        }
+
+        .experience-details {
+            margin-top: 20px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: square;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: indigo;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-box">
+            <h1><i><b>My Life Chronicles</b></i></h1>
+            <h2>Welcome to my website
+                Home Page</h2>
+            <h3>Hi, I am Ainaa Aqilah a student from IM 110 here is the diary of my life. Feel free to read it!</h3>
+            <img src="image/profile.png" alt="aqilah">
+        </div>
+    </section>
+
+    <!-- Navigation Popup -->
+    <button class="nav-button" onclick="toggleNav()">Menu</button>
+    <div class="overlay" onclick="toggleNav()"></div>
+    <div class="nav-popup" id="navPopup">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="kindred.html">Kindred</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="educational.html">Educational</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+    </div>
+
+    <!-- About me Container -->
+    <div class="aboutus container">
+        <header>
+            <h1>About me</h1>
+            <ul>
+                <li>Name : Ainaa Aqilah binti Kamaruzaman </li>
+                <li>Age: 21 years old </li>
+                <li>Gender: Female </li>
+                <li>Date of birth: 22 September 2004</li>
+                <li>Status: Single </li>
+                <li>Religion: Muslim </li>
+                <li>Nationality: Malaysian </li>
+                <li>Course : IM 110 </li>
+                <li>Faculty: UiTM Machang Campus </li>
+                <li>Address: Apartment Puchong Permata 2, Taman Puchong Permai 47100 Puchong, Selangor.</li>
+                <li>Ambition: Own a cafe </li>
+                <li>Hobby: Art & Reading books </li>
+                <li>Currently : A student</li>
+            </ul>
+        </header>
+
+            <div>
+                <h2>LinkedIn: </h2>
+                <a href="https://www.linkedin.com/in/ainaa-aqilah-748844300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><b>click here</b></a>
+            </div>
+
+            <!-- YouTube Video Embed -->
+            <div class="video-container">
+                <h2>My Favorite Video</h2>
+                <iframe width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/-r_Jzg0lh1g?si=jdBkmMeMFfrj2QqV" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+                </iframe>
+            </div>    
+    </div>
+
+    <footer>
+        <div class="aboutus-info">
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> <a href="https://wa.link/yg8zkk" target="_blank">+60136645894</a></p>
+            <p><strong>Email:</strong> <a href="mailto:ainaasqilah229@gmail.com ">ainaasqilah229@gmail.com </a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/aqilahkmrzmn/" target="_blank">@aqilahkmrzmn</a></p>
+            <p><strong>X:</strong> <a href="https://x.com/aqilahkmrzmn" target="_blank">aqilahkmrzmn</a></p>
+        </div>
+        <p>&copy; 2025 Ainaa Aqilah Kamaruzaman. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const navPopup = document.getElementById('navPopup');
+            const overlay = document.querySelector('.overlay');
+            const isVisible = navPopup.style.display === 'block';
+
+            navPopup.style.display = isVisible ? 'none' : 'block';
+            overlay.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
